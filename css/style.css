@@ -1,69 +1,121 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #f8f8f8, #e0e0e0);
     color: #333;
+    animation: fadeIn 1s ease-in;
 }
 
 header {
-    background-color: #243553;
+    background-color: #111;
     color: white;
+    padding: 2rem;
     text-align: center;
-    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    animation: slideDown 1s ease-out;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
 }
 
 section {
-    max-width: 800px;
-    margin: 20px auto;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
     background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #243553;
+    border-radius: 12px;
+    margin-top: 2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease;
 }
 
 img {
-    display: block;
-    max-width: 100px;
+    max-width: 180px;
     border-radius: 50%;
-    margin: 10px auto;
+    display: block;
+    margin: 1rem auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0b59d8;
+    text-decoration: underline;
 }
 
 .hobby {
-    background-color: #96acd1;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-#letterboxd a {
-    display: inline-block;
-    background-color: #FF8000;
-    color: #00E054;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
+    margin-top: 1.5rem;
 }
 
-#letterboxd a:hover {
-    background-color: #40bcf4;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#besiktas {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: 6px solid red;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
 }
 
 #besiktas a {
-    display: inline-block;
-    background-color: #000000;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
+    color: red;
 }
 
-#besiktas a:hover {
-    background-color: #fa0000;
+#besiktas:hover {
+    transform: scale(1.02);
 }
 
+#letterboxd {
+    background-color: #121212;
+    color: #d4d4d4;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: 6px solid #00C030; /* yeşilimsi Letterboxd tonu */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+#letterboxd a {
+    color: #00C030;
+}
+
+#letterboxd:hover {
+    transform: scale(1.02);
+}
